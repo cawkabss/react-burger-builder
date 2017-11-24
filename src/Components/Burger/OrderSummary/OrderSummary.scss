@@ -1,0 +1,18 @@
+.order-summary-title{
+  margin-bottom: 20px;
+}
+.order-summary-ingredients-list{
+  margin: 10px 0;
+  list-style: none;
+}
+.order-summary-ingredient-item{
+  text-decoration: underline;
+
+  span{
+    text-transform: capitalize;
+  }
+}
+.order-summary-action{
+  display: flex;
+  justify-content: space-around;
+}

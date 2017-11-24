@@ -15,15 +15,22 @@ const buildControls = ( props ) => {
     return (
         <div className="buildControls">
             <p>Current price: <strong>{ props.price }$</strong></p>
-            { controls.map( ctrl => (
-                <BuildControl
-                    key={ ctrl.label }
-                    label={ ctrl.label }
-                    disabled={ props.disabledInfo[ctrl.type] }
-                    addIngredient={ () => props.addIngredient(ctrl.type) }
-                    removeIngredient={ () => props.removeIngredient(ctrl.type) }
-                />
-            ) )}
+            { controls.map( ctrl => {
+
+                    const isDisabled = props.ingredients.findIndex( el => el.type === ctrl.type ) === -1;
+
+                    return (
+                        <BuildControl
+                            key={ ctrl.label }
+                            label={ ctrl.label }
+                            disabled={ isDisabled }
+                            addIngredient={ () => props.addIngredient(ctrl.type) }
+                            removeIngredient={ () => props.removeIngredient(ctrl.type) }
+                        />
+                        )
+            }
+
+             )}
             <button
                 className="order-btn"
                 disabled={ !props.purchasable }
