@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import Wrapper from "../../hoc/Wrapper";
-import Header from "../Header/Header";
+import Header from "../../Components/Header/Header";
 import './Layout.css';
-import SideDrawer from "../SideDrawer/SideDrawer";
+import SideDrawer from "../../Components/SideDrawer/SideDrawer";
 
 class Layout  extends Component{
 

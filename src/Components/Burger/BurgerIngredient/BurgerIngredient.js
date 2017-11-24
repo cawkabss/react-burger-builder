@@ -17,8 +17,12 @@ class BurgerIngredient extends Component {
             case 'bread-top':
                 ingredient = (
                     <div className="burger-ingredient bread-top">
-                        <div className="seeds1"/>
-                        <div className="seeds2"/>
+                        <i className="seeds1"/>
+                        <i className="seeds2"/>
+                        <i className="seeds2"/>
+                        <i className="seeds2"/>
+                        <i className="seeds2"/>
+                        <i className="seeds2"/>
                     </div>
                 );
                 break;
@@ -31,8 +35,8 @@ class BurgerIngredient extends Component {
                 ingredient = <div className="burger-ingredient cheese"/>;
                 break;
 
-            case 'bacon':
-                ingredient = <div className="burger-ingredient bacon"/>;
+            case 'tomato':
+                ingredient = <div className="burger-ingredient tomato"/>;
                 break;
 
             case 'salad':
