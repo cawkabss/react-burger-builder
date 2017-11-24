@@ -1,0 +1,34 @@
+.header{
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #703B09;
+  z-index: 90;
+  color: #fff;
+}
+.sideDrawer-btn{
+  display: none;
+}
+
+.header .logo{
+  height: 80%;
+}
+
+.header nav{
+  height: 100%;
+}
+
+@media(max-width: 499px){
+  .header-nav{
+    display: none;
+  }
+  .sideDrawer-btn{
+    display: block;
+  }
+}

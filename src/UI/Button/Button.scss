@@ -1,0 +1,23 @@
+.button{
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &.success{
+    color: #5C9210
+  }
+
+  &.danger{
+    color: #944317;
+  }
+}
+
+.button:first-of-type{
+  margin-left: 0;
+}
