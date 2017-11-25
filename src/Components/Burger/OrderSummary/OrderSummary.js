@@ -9,7 +9,8 @@ const orderSummary = ( props ) => {
     //Calculate count of each ingredient
 
     const ingredientsCount = {};
-    props.ingredients.forEach( ing => { ingredientsCount[ing.type] = (ingredientsCount[ing.type] || 0) + 1; });
+    props.choosingIngredients
+        .forEach( ing => { ingredientsCount[ing.type] = (ingredientsCount[ing.type] || 0) + 1; });
 
     const ingredientSummary = Object.keys(ingredientsCount)
         .map( igKey => {

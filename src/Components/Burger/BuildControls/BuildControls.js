@@ -17,7 +17,8 @@ const buildControls = ( props ) => {
             <p>Current price: <strong>{ props.price }$</strong></p>
             { controls.map( ctrl => {
 
-                    const isDisabled = props.ingredients.findIndex( el => el.type === ctrl.type ) === -1;
+                //Check if ingredient is already been choice and we can it Less
+                    const isDisabled = props.choosingIngredients.findIndex( el => el.type === ctrl.type ) === -1;
 
                     return (
                         <BuildControl
