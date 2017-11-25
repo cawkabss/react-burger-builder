@@ -31,7 +31,7 @@ const orderSummary = ( props ) => {
             <p>Continue to Checkout?</p>
             <div className="order-summary-action">
                 <Button btnType='danger' clicked={ props.cancelOrder }>cancel</Button>
-                <Button btnType='success'>continue</Button>
+                <Button btnType='success' clicked={ () => props.successOrder(ingredientsCount) }>continue</Button>
             </div>
         </Wrapper>
     )
