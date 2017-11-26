@@ -8,6 +8,7 @@ import Modal from "../../UI/Modal/Modal";
 import OrderSummary from "../../Components/Burger/OrderSummary/OrderSummary";
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import Spinner from "../../UI/Spinner/Spinner";
+import Checkout from "../Checkout/Checkout";
 
 
 class BurgerBuilder extends Component {
@@ -23,7 +24,7 @@ class BurgerBuilder extends Component {
     };
 
     componentDidMount(){
-        axios.get('/allowedIngredients').then( res => {
+        axios.get('/allowedIngredients.json').then( res => {
             this.setState({
                 allowedIngredients: res.data
             })
