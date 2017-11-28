@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import axios from '../../../axios';
 import './ContactForm.css';
@@ -103,9 +104,13 @@ class ContactForm extends Component {
             formData[key] = this.state.orderForm[key].value;
         }
 
+        const ingredientsCount = {};
+        this.props.choosingIngs
+            .forEach( ing => { ingredientsCount[ing.type] = (ingredientsCount[ing.type] || 0) + 1; });
+
         const order = {
-            ingredients: this.props.ingredientsCount,
-            price: this.props.totalPrice,
+            ingredients: ingredientsCount,
+            price: this.props.price,
             customer: formData
         };
 
@@ -205,4 +210,11 @@ class ContactForm extends Component {
     }
 }
 
-export default ContactForm;
+const mapStateToProps = state => {
+    return {
+        choosingIngs: state.choosingIngredients,
+        price: state.totalPrice
+    }
+};
+
+export default connect(mapStateToProps)(ContactForm);
