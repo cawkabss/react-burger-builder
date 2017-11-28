@@ -19,6 +19,7 @@ const orderSummary = ( props ) => {
                     <span>{igKey}</span>: {ingredientsCount[igKey]}
                 </li>;
             }
+            return null;
         });
 
     return (

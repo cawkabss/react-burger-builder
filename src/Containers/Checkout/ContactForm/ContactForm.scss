@@ -1,0 +1,21 @@
+.contact-form-container{
+  text-align: center;
+  width: 80%;
+  margin: 80px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 3px 2px #ccc;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(min-width: 600px){
+  .contact-form-container{
+    width: 500px;
+  }
+}
